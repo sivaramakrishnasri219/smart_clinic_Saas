@@ -1,0 +1,6 @@
+from django.db import models
+
+class Patient(models.Model):
+    clinic = models.ForeignKey('clinics.Clinic', on_delete=models.CASCADE)
+    name = models.CharField(max_length=255)
+    phone = models.CharField(max_length=15)
